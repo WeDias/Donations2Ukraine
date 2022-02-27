@@ -9,17 +9,17 @@ class Donations:
         self.USDT_ADDRESS = '0xdac17f958d2ee523a2206206994597c13d831ec7'
 
     def get_btc_value_in_usd(self) -> float:
-        response = requests.get(f'{self.BASE_URL}/bitcoin/dashboards/address/{self.BTC_ADDRESS}&limit=0')
+        response = requests.get(f'{self.BASE_URL}/bitcoin/dashboards/address/{self.BTC_ADDRESS}')
         btc_in_usd = response.json()['data'][self.BTC_ADDRESS]['address']['received_usd']
         return btc_in_usd
 
     def get_eth_value_in_usd(self) -> float:
-        response = requests.get(f'{self.BASE_URL}/ethereum/dashboards/address/{self.ETH_ADDRESS}&limit=0')
+        response = requests.get(f'{self.BASE_URL}/ethereum/dashboards/address/{self.ETH_ADDRESS}')
         eth_in_usd = response.json()['data'][self.ETH_ADDRESS]['address']['received_usd']
         return eth_in_usd
 
     def get_value_in_usdt(self) -> float:
-        response = requests.get(f'{self.BASE_URL}/ethereum/erc-20/{self.USDT_ADDRESS}/dashboards/address/{self.ETH_ADDRESS}&limit=0')
+        response = requests.get(f'{self.BASE_URL}/ethereum/erc-20/{self.USDT_ADDRESS}/dashboards/address/{self.ETH_ADDRESS}')
         usdt = response.json()['data'][self.ETH_ADDRESS]['address']['received_approximate']
         return usdt
 
