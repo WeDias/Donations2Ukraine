@@ -26,7 +26,7 @@
     $ pip install -r requirements.txt
     ```
 
-- ### Executando a aplicação
+- ### Running the application
     Inside the project, run the following command to run the application:
     ```
     $ flask run
