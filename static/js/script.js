@@ -19,9 +19,9 @@ function updateDonatedValue() {
     .then((resp) => resp.json())
     .then((data) => {
         const newValue = data.donated_usd;
-        animateValue(document.getElementById("donated"), currentValue, newValue, 15000);
+        animateValue(document.getElementById("donated"), currentValue, newValue, 10000);
     });
 };
 
 updateDonatedValue();
-setInterval(updateDonatedValue, 15000);
+setInterval(updateDonatedValue, 60000);
