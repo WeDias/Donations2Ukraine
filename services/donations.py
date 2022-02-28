@@ -1,6 +1,7 @@
 import requests
 from cachetools import TTLCache
 
+
 class Donations:
 
     BASE_URL = 'https://api.blockchair.com'
