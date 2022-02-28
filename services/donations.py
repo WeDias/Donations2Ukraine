@@ -1,12 +1,15 @@
 import requests
+from cachetools import TTLCache
 
 class Donations:
 
+    BASE_URL = 'https://api.blockchair.com'
+    BTC_ADDRESS = '357a3So9CbsNfBBgFYACGvxxS6tMaDoa1P'
+    ETH_ADDRESS = '0x165cd37b4c644c2921454429e7f9358d18a45e14'
+    USDT_ADDRESS = '0xdac17f958d2ee523a2206206994597c13d831ec7'
+
     def __init__(self) -> None:
-        self.BASE_URL = 'https://api.blockchair.com'
-        self.BTC_ADDRESS = '357a3So9CbsNfBBgFYACGvxxS6tMaDoa1P'
-        self.ETH_ADDRESS = '0x165cd37b4c644c2921454429e7f9358d18a45e14'
-        self.USDT_ADDRESS = '0xdac17f958d2ee523a2206206994597c13d831ec7'
+        self.cache = TTLCache(maxsize=1, ttl=60)
 
     def get_btc_value_in_usd(self) -> float:
         response = requests.get(f'{self.BASE_URL}/bitcoin/dashboards/address/{self.BTC_ADDRESS}')
@@ -24,4 +27,6 @@ class Donations:
         return usdt
 
     def get_total_value_in_usd(self) -> float:
-        return self.get_btc_value_in_usd() + self.get_eth_value_in_usd() + self.get_value_in_usdt()
+        if 'donated' not in self.cache:
+            self.cache['donated'] = self.get_btc_value_in_usd() + self.get_eth_value_in_usd() + self.get_value_in_usdt()
+        return self.cache['donated']
