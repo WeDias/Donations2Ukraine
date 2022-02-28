@@ -3,6 +3,7 @@ let currentValue = 0;
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
   const step = (timestamp) => {
+    document.getElementById('lastUpdate').innerText = Date()
     if (!startTimestamp) startTimestamp = timestamp;
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
     currentValue = progress * (end - start) + start;
