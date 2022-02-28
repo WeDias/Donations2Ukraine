@@ -19,7 +19,7 @@ function updateDonatedValue(isFirst) {
   .then((resp) => resp.json())
   .then((data) => {
     const newValue = data.donated_usd;
-    animateValue(document.getElementById('donated'), currentValue, newValue, isFirst ? 1500 : 55000);
+    animateValue(document.getElementById('donated'), currentValue, newValue, isFirst ? 1500 : 60000);
   });
 };
 
