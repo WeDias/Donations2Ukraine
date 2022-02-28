@@ -1,7 +1,7 @@
 # Donations2Ukraine
 
 - ## About
-  Real-time value of donations made with cryptocurrencies to help ukraine. Made with Python and Flask.  
+  "Real-time" value of donations made with cryptocurrencies to help ukraine. Made with Python and Flask.  
   Available at: https://donations2ukraine.herokuapp.com/
 
 - ## API
