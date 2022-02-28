@@ -1,6 +1,7 @@
 let currentValue = 0;
 
 function animateValue(obj, start, end, duration) {
+  if (start == end) return;
   let startTimestamp = null;
   const step = (timestamp) => {
     document.getElementById('lastUpdate').innerText = Date()
