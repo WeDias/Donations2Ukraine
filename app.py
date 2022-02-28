@@ -1,7 +1,7 @@
 from os import environ
 
 from flask import Flask
-from controllers import home
+from controllers.home import home
 
 app = Flask(__name__)
 
