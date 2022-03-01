@@ -24,9 +24,14 @@ body {
   border-radius: 16px;
 }
 
+#donated {
+  display: inline;
+}
+
 .tooltip-inner {
   border-radius: 16px;
   color: #6c757d;
+  max-width: 430px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +44,10 @@ body {
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  #info-btn {
+    color: #f5f5f5;
   }
 
   .link {
@@ -66,6 +75,10 @@ body {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  #info-btn {
+    color: #212529;
   }
 
   .link {
