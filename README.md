@@ -1,7 +1,14 @@
+<a title="Government of Ukraine, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Flag_of_Ukraine.svg">
+  <img width="128" alt="Flag of Ukraine" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/256px-Flag_of_Ukraine.svg.png">
+</a>
+
 # Donations2Ukraine
 
-- ## About
-  "Real-time" value of donations made with cryptocurrencies to help ukraine. Made with Python and Flask.  
+  "Real-time" value of donations made with cryptocurrencies to help ukraine. Made with Python and Flask. 
+  
+  The total amount corresponds to all donations made in the [official wallets](https://twitter.com/Ukraine/status/1497594592438497282)
+  of the government of ukraine and the amounts donated to the wallet of [NGO Ukraine DAO](https://www.ukrainedao.love/).  
+  
   Available at: https://donations2ukraine.herokuapp.com/
 
 - ## API
