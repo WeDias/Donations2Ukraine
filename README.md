@@ -7,7 +7,7 @@
   "Real-time" value of donations made with cryptocurrencies to help ukraine. Made with Python and Flask. 
   
   The total amount corresponds to all donations made in the [official wallets](https://twitter.com/Ukraine/status/1497594592438497282)
-  of the government of ukraine and the amounts donated to the wallet of [NGO Ukraine DAO](https://www.ukrainedao.love/).  
+  of the government of ukraine and the amounts donated to the wallet of [NGO Come Back Alive](https://twitter.com/Ukraine_DAO).  
   
   Available at: https://donations2ukraine.herokuapp.com/
 
